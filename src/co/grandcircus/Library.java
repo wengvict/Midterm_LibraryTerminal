@@ -28,7 +28,7 @@ public class Library {
 
 			while (line != null) {
 				String[] arr = line.split(",");
-				Book book = new Book(arr[0], arr[1], Boolean.parseBoolean(arr[2]), arr[3]);
+				Book book = new Book(arr[0], arr[1], Boolean.parseBoolean(arr[2]));
 				bookList.add(book);
 				line = br.readLine();
 			}
@@ -69,19 +69,21 @@ public class Library {
 	}
 
 	public static void findByName(List<Book> list, String userSearchAuthor ) {
-
+		int counter = 0;
 		for (int i = 0; i < list.size(); i++) {
 			String s = list.get(i).getAuthor();
 		
 			if(s.contains(userSearchAuthor)) {
-			System.out.println(list.get(i));
-			}else {
-				
+				System.out.println((i + 1) + ": " + list.get(i));
+				counter++;
 			}
-			
+			}
+			if (counter == 0) {
+				System.out.println("not found");
+			}
 		}
 		
 		
-	}
+
 
 }
