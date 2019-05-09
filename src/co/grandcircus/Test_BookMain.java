@@ -6,7 +6,7 @@ public class Test_BookMain {
 		
 	
 		
-	Library.readBookInv("books.txt");		
+	Library.readBookInv("src/books.txt");		
 		
 	//Library.findByName(Library.readBookInv("books.txt")	, "Dickens");
 		

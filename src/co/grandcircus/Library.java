@@ -64,7 +64,7 @@ public class Library {
 		} catch (FileNotFoundException e) {
 			System.out.println("Cant add to list");
 		} finally {
-			// insurance - not more alterations to .txt
+			// insurance - no more alterations to .txt
 			output.close();
 		}
 	}

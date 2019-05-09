@@ -1,0 +1,15 @@
+Don Quixote,Miguel de Cervantes,true
+A Tale of Two Cities,Charles Dickens,true
+The Lord of the Rings,J.R.R. Tolkein,true
+The Little Prince,Antoine de Saint-Exupery,true
+Harry Potter and the Philosopher's Stone,J.K. Rowling,true
+And Then There Were None, Agatha Christie,true
+The Hobbit,J.R.R. Tolkein,true
+Dream of the Red Chamber,Can XueQin,true
+Alice's Adventures,Lewis Carroll,true
+The Lion the Witch and the Wardrobe,C.S. Lewis,true
+The Catcher in the Rye,J.D. Salinger,true
+The Adventures of Sherlock Holmes,Sir Arthur Conan Doyle,true
+20000 Leagues under the Sea,Jules Verne,true
+One Hundred Years of Solitude,Gabriel Garcia Marquez,true
+Lolita,Vladimir Nabokov,true
