@@ -71,7 +71,11 @@ public class Library {
 	public static void findByName(List<Book> list, String userSearchAuthor ) {
 		int counter = 0;
 		for (int i = 0; i < list.size(); i++) {
+			
+			
 			String s = list.get(i).getAuthor();
+			s = s.toLowerCase();
+			userSearchAuthor = userSearchAuthor.toLowerCase();
 			if(s.contains(userSearchAuthor)) {
 				System.out.println((i + 1) + ": " + list.get(i));
 				counter++;
@@ -82,7 +86,22 @@ public class Library {
 			}
 		}
 		
-		
+	public static void findByTitle(List<Book> list, String userSearchTitle ) {
+		int counter = 0;
+		for (int i = 0; i < list.size(); i++) {
+			
+			String s = list.get(i).getAuthor();
+			s = s.toLowerCase();
+			userSearchTitle = userSearchTitle.toLowerCase();
+			if(s.contains(userSearchTitle)) {
+				System.out.println((i + 1) + ": " + list.get(i));
+				counter++;
+			}
+			}
+			if (counter == 0) {
+				System.out.println("not found");
+			}
+		}
 
 
 }
