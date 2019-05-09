@@ -91,7 +91,7 @@ public class Library {
 		int counter = 0;
 		for (int i = 0; i < list.size(); i++) {
 			
-			String s = list.get(i).getAuthor();
+			String s = list.get(i).getTitle();
 			s = s.toLowerCase();
 			userSearchTitle = userSearchTitle.toLowerCase();
 			if(s.contains(userSearchTitle)) {

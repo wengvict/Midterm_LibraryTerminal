@@ -10,7 +10,7 @@ public class LibraryApp {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-
+		// list for books to be checked out
 		List<Book> checkedOutBooks = new ArrayList<Book>();
 
 		System.out.println("welcome to the Grand Circus library");
@@ -25,7 +25,7 @@ public class LibraryApp {
 			System.out.println("4: Checkout a book");
 			System.out.println("5: Exit");
 
-			// if list books
+			// if 1. list books
 			input = Validator.getInt(scan, "", 1, 5);
 			if (input == 1) {
 
@@ -34,15 +34,18 @@ public class LibraryApp {
 					System.out.println((i + 1) + ": " + booklist.get(i));
 				}
 			}
-			// if search by author
+			// if 2. search by author
 			if (input == 2) {
 				String authorName = Validator.getString(scan, "enter part or all of Author's name");
 
 				Library.findByName(Library.readBookInv("src/books.txt"), authorName);
-
-				// add search by name
-
 			}
+				// add search by name
+				if (input == 3) {
+					String userTitle = Validator.getString(scan, "enter part or all of book title");
+					Library.findByTitle(Library.readBookInv("src/books.txt"), userTitle);
+				}
+
 			// checkout a book
 			if (input == 4) {
 				LocalDate currentDay = LocalDate.now();
@@ -60,6 +63,8 @@ public class LibraryApp {
 				checkedOutBooks.add(booklist.get(bookCheckOut - 1));
 				// add updated book to list
 				// make new list of checked out books
+
+				Library.addBook(checkedOutBooks);
 			}
 
 			// exit condition
