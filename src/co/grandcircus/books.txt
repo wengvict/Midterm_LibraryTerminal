@@ -7,7 +7,7 @@ And Then There Were None, Agatha Christie,  true, null
 The Hobbit, J.R.R. Tolkein,true, null
 Dream of the Red Chamber, Can XueQin, true, null
 Alice’s Adventures, Lewis Carroll, true, null
-The Lion the Witch and the Wardrobe, C.S. Lewis, true null
+The Lion the Witch and the Wardrobe, C.S. Lewis, true, null
 The Catcher in the Rye, J.D. Salinger, true, null
 The Adventures of Sherlock Holmes, Sir Arthur Conan Doyle, true, null
 20000 Leagues under the Sea, Jules Verne, true, null
