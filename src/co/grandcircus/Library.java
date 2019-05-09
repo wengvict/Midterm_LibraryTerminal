@@ -10,7 +10,6 @@ import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Library {
@@ -46,7 +45,7 @@ public class Library {
 	}
 
 	public static void writeToFile(List<Book> list) {
-		String fileName = "books.txt";
+		String fileName = "src/books.txt";
 		Path path = Paths.get(fileName);
 
 		// Path to.txt file
@@ -55,10 +54,12 @@ public class Library {
 		PrintWriter output = null;
 
 		try {
-			output = new PrintWriter(new FileOutputStream(file, true));
+			// should be false to overwrite past file
+			output = new PrintWriter(new FileOutputStream(file, false));
 
 			// takes list looks for book objects to put into
 			for (Book b : list) {
+				System.out.println(b);
 				output.println(b);
 			}
 		} catch (FileNotFoundException e) {
@@ -104,7 +105,9 @@ public class Library {
 			}
 		}
 	
+	public static void addBook(List<Book> list, Book book) {
 
+	}
 	
 	
 	
