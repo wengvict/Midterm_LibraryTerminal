@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Library {
@@ -44,7 +45,7 @@ public class Library {
 		return bookList;
 	}
 
-	public static void addBook(List<Book> list) {
+	public static void writeToFile(List<Book> list) {
 		String fileName = "books.txt";
 		Path path = Paths.get(fileName);
 
@@ -102,6 +103,6 @@ public class Library {
 				System.out.println("not found");
 			}
 		}
-
+	
 
 }
