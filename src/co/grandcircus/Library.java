@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +28,7 @@ public class Library {
 
 			while (line != null) {
 				String[] arr = line.split(",");
-				Book book = new Book(arr[0], arr[1], Boolean.parseBoolean(arr[2]), LocalDate.parse(arr[3]));
+				Book book = new Book(arr[0], arr[1], Boolean.parseBoolean(arr[2]), arr[3]);
 				bookList.add(book);
 				line = br.readLine();
 			}
