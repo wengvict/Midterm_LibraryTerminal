@@ -72,7 +72,6 @@ public class Library {
 		int counter = 0;
 		for (int i = 0; i < list.size(); i++) {
 			String s = list.get(i).getAuthor();
-		
 			if(s.contains(userSearchAuthor)) {
 				System.out.println((i + 1) + ": " + list.get(i));
 				counter++;

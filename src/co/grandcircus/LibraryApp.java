@@ -8,36 +8,7 @@ import java.util.Scanner;
 public class LibraryApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// display menu
-//		ArrayList<Book> booklist = new ArrayList<>();
-//		LocalDate currentDay = LocalDate.now();
-//
-//		Book a = new Book("Don Quixote", "Miguel de Cervantes", true);
-//		Book b = new Book("ABCs", "alphabet", true);
-//
-//		booklist.add(a);
-//		booklist.add(b);
-//		// display books
-//		for (int i = 0; i < booklist.size(); i++) {
-//			System.out.println((i + 1) + ": " + booklist.get(i));
-//		}
-//
-////		for (Book s : booklist) {
-////			System.out.println(s);
-////		}
-//		// display books
-//
-//		// ask if they want to check out a book
-//		System.out.println("would you like to search for a book or checkout a book?");
-//		System.out.println("1: Search by Author");
-//		System.out.println("2: Search by Title");
-//		System.out.println("3: checkout a book");
 
-
-		// dueDate = currentDay.plusDays(14)
-
-		///////// new stuff
 
 		Scanner scan = new Scanner(System.in);
 
