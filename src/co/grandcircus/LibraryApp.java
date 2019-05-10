@@ -77,7 +77,10 @@ public class LibraryApp {
 				// make new list of checked out books
 					Library.writeToFile(booklist);
 				} else {
-					System.out.println("that book is already checked out");
+					System.out.println("That book is already checked out");
+					List<Book> booklist1 = Library.readBookInv("src/books.txt");
+					System.out.println(booklist.get((bookCheckOut) - 1).getTitle() + " is due back on "
+							+ booklist1.get(bookCheckOut - 1).getDueDate());
 				}
 
 				//
