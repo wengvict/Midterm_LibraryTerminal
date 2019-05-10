@@ -1,9 +1,9 @@
-Don Quixote,Miguel de Cervantes,ON_SHELF,null
-A Tale of Two Cities,Charles Dickens,ON_SHELF,null
+Don Quixote,Miguel de Cervantes,ON_SHELF,2019-05-24
+A Tale of Two Cities,Charles Dickens,ON_SHELF,2019-05-24
 The Lord of the Rings,J.R.R. Tolkein,ON_SHELF,null
 The Little Prince,Antoine de Saint-Exupery,ON_SHELF,null
-Harry Potter and the Philosopher's Stone,J.K. Rowling,ON_SHELF,null
-And Then There Were None, Agatha Christie,ON_SHELF,null
+Harry Potter and the Philosopher's Stone,J.K. Rowling,CHECKED_OUT,2019-05-24
+And Then There Were None, Agatha Christie,ON_SHELF,2019-05-24
 The Hobbit,J.R.R. Tolkein,ON_SHELF,null
 Dream of the Red Chamber,Can XueQin,ON_SHELF,null
 Alice's Adventures,Lewis Carroll,ON_SHELF,null
