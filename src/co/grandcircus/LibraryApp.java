@@ -117,6 +117,7 @@ public class LibraryApp {
 
 				}
 				if (counter > 0) {
+					System.out.println("Press keys 1-" + booklist.size() + " to return menu.");
 					System.out.print("Enter the index number of the book you are returning: ");
 
 					//

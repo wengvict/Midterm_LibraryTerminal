@@ -70,7 +70,7 @@ public class Library {
 				output.println(b);
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("Cant add to list");
+			System.out.println("Cannot add to list.");
 		} finally {
 			// insurance - no more alterations to .txt
 			output.close();
@@ -111,7 +111,7 @@ public class Library {
 			}
 			}
 			if (counter == 0) {
-				System.out.println("not found");
+				System.out.println("Book not found.");
 			}
 		}
 	
