@@ -54,9 +54,7 @@ public class LibraryApp {
 				int bookCheckOut = Validator.getInt(scan, "", 1, booklist.size());
 				
 				
-				
-				
-
+				if ((booklist.get(bookCheckOut - 1).isStatus()) == checkedOut.ON_SHELF) {
 				// check if book is already checkout out. if onshelf=true, continue
 				System.out.print("you checked out: ");
 				System.out.println(
@@ -69,9 +67,13 @@ public class LibraryApp {
 				checkedOutBooks.add(booklist.get(bookCheckOut - 1));
 				// add updated book to list
 				// make new list of checked out books
+					Library.writeToFile(booklist);
+				} else {
+					System.out.println("that book is already checked out");
+				}
 
 				//
-				Library.writeToFile(booklist);
+
 			}
 
 			// exit condition

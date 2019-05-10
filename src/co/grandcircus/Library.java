@@ -59,7 +59,7 @@ public class Library {
 
 			// takes list looks for book objects to put into
 			for (Book b : list) {
-				System.out.println(b);
+				// System.out.println(b);
 				output.println(b);
 			}
 		} catch (FileNotFoundException e) {
