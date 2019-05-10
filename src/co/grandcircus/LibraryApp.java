@@ -84,7 +84,7 @@ public class LibraryApp {
 					Library.writeToFile(booklist);
 
 				} else {
-					System.out.println("That book is already checked out.");
+					System.out.println("\nThat book is already checked out.");
 					List<Book> booklist1 = Library.readBookInv("src/books.txt");
 					System.out.println(booklist.get((bookCheckOut) - 1).getTitle() + " is due back on "
 							+ booklist1.get(bookCheckOut - 1).getDueDate());
@@ -117,7 +117,7 @@ public class LibraryApp {
 
 				}
 				if (counter > 0) {
-					System.out.println("Press keys 1-" + booklist.size() + " to return menu.");
+					System.out.println("Enter any book number that is not on the list to return to the menu.");
 					System.out.print("Enter the index number of the book you are returning: ");
 
 					//
@@ -142,7 +142,7 @@ public class LibraryApp {
 			}
 		}
 		System.out.println();
-		System.out.println("Thank you for stopping by the Grand Circus Library");
+		System.out.println("Thank you for stopping by the Grand Circus Library!");
 	}
 
 }

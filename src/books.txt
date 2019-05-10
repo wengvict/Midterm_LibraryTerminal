@@ -2,12 +2,12 @@ Don Quixote,Miguel de Cervantes,ON_SHELF,null
 A Tale of Two Cities,Charles Dickens,ON_SHELF,null
 The Lord of the Rings,J.R.R. Tolkien,ON_SHELF,null
 The Little Prince,Antoine de Saint-Exupery,ON_SHELF,null
-Harry Potter and the Philosopher's Stone,J.K. Rowling,CHECKED_OUT,2019-05-24
+Harry Potter and the Philosopher's Stone,J.K. Rowling,ON_SHELF,null
 And Then There Were None,Agatha Christie,ON_SHELF,null
 The Hobbit,J.R.R. Tolkien,ON_SHELF,null
 Dream of the Red Chamber,Can XueQin,ON_SHELF,null
 Alice's Adventures,Lewis Carroll,ON_SHELF,null
-The Lion the Witch and the Wardrobe,C.S. Lewis,CHECKED_OUT,2019-05-24
+The Lion the Witch and the Wardrobe,C.S. Lewis,ON_SHELF,null
 The Catcher in the Rye,J.D. Salinger,ON_SHELF,null
 The Adventures of Sherlock Holmes,Sir Arthur Conan Doyle,ON_SHELF,null
 20000 Leagues Under the Sea,Jules Verne,ON_SHELF,null
