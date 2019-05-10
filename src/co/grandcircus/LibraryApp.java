@@ -23,11 +23,11 @@ public class LibraryApp {
 			System.out.println("2: Search by Author");
 			System.out.println("3: Search by Title");
 			System.out.println("4: Checkout a book");
-			System.out.println("5: Returna book");
+			System.out.println("5: Return a book");
 			System.out.println("6: Exit");
 
 			// if 1. list books
-			input = Validator.getInt(scan, "", 1, 5);
+			input = Validator.getInt(scan, "", 1, 6);
 			if (input == 1) {
 
 				List<Book> booklist = Library.readBookInv("src/books.txt");
@@ -36,7 +36,13 @@ public class LibraryApp {
 					Book b = booklist.get(i);
 					String authorF = String.format("| %-25s | ", b.getAuthor());
 					String titleF = String.format(" %-43s| ", b.getTitle());
-					String onShelfF = String.format(" %-3s %n", b.isStatus());
+					String onShelfF = "";
+					if (b.isStatus() == checkedOut.CHECKED_OUT) {
+						onShelfF = String.format(" %-3s %n", "Checked out");
+					}
+					if (b.isStatus() == checkedOut.ON_SHELF) {
+						onShelfF = String.format(" %-3s %n", "On Shelf");
+					}
 					String index = String.format(" %-5s ", (i + 1) + ": ");
 
 					System.out.println(index + authorF + titleF + onShelfF);
@@ -50,14 +56,14 @@ public class LibraryApp {
 			}
 			// add search by name
 			if (input == 3) {
-				String userTitle = Validator.getString(scan, "enter part or all of book title");
+				String userTitle = Validator.getString(scan, "enter part or all of book title ");
 				Library.findByTitle(Library.readBookInv("src/books.txt"), userTitle);
 			}
 
 			// checkout a book
 			if (input == 4) {
 				LocalDate currentDay = LocalDate.now();
-				System.out.println("which book do you want to checkout (enter the index #)");
+				System.out.println("which book do you want to checkout (enter the index #) ");
 				List<Book> booklist = Library.readBookInv("src/books.txt");
 				int bookCheckOut = Validator.getInt(scan, "", 1, booklist.size());
 
@@ -112,8 +118,9 @@ public class LibraryApp {
 					System.out.println("Which book are you returning? ");
 
 					//
-					int returnBook = Validator.getInt(scan, "");
+					int returnBook = Validator.getInt(scan, "", 1, booklist.size());
 					booklist.get(returnBook - 1).setStatus(checkedOut.ON_SHELF);
+					booklist.get(returnBook - 1).setDueDate(null);
 					Library.writeToFile(booklist);
 				} else {
 					System.out.println("There are no books checked out to return.");
@@ -126,7 +133,7 @@ public class LibraryApp {
 		// display books that were checked out
 
 		if (checkedOutBooks.size() > 0) {
-			System.out.println("you checked out:");
+			System.out.println("you checked out: ");
 			for (Book a : checkedOutBooks) {
 				System.out.println(a.getTitle() + ", due: " + a.getDueDate());
 			}
