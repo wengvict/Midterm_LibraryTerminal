@@ -1,15 +1,15 @@
-Don Quixote,Miguel de Cervantes,true,null
-A Tale of Two Cities,Charles Dickens,true,null
-The Lord of the Rings,J.R.R. Tolkein,true,null
-The Little Prince,Antoine de Saint-Exupery,true,null
-Harry Potter and the Philosopher's Stone,J.K. Rowling,true,null
-And Then There Were None, Agatha Christie,true,null
-The Hobbit,J.R.R. Tolkein,true,null
-Dream of the Red Chamber,Can XueQin,true,null
-Alice's Adventures,Lewis Carroll,true,null
-The Lion the Witch and the Wardrobe,C.S. Lewis,true,null
-The Catcher in the Rye,J.D. Salinger,true,null
-The Adventures of Sherlock Holmes,Sir Arthur Conan Doyle,true,null
-20000 Leagues under the Sea,Jules Verne,true,null
-One Hundred Years of Solitude,Gabriel Garcia Marquez,true,null
-Lolita,Vladimir Nabokov,true,null
+Don Quixote,Miguel de Cervantes,ON_SHELF,null
+A Tale of Two Cities,Charles Dickens,ON_SHELF,null
+The Lord of the Rings,J.R.R. Tolkein,CHECKED_OUT,2019-05-24
+The Little Prince,Antoine de Saint-Exupery,ON_SHELF,null
+Harry Potter and the Philosopher's Stone,J.K. Rowling,ON_SHELF,null
+And Then There Were None, Agatha Christie,ON_SHELF,null
+The Hobbit,J.R.R. Tolkein,ON_SHELF,null
+Dream of the Red Chamber,Can XueQin,ON_SHELF,null
+Alice's Adventures,Lewis Carroll,ON_SHELF,null
+The Lion the Witch and the Wardrobe,C.S. Lewis,ON_SHELF,null
+The Catcher in the Rye,J.D. Salinger,ON_SHELF,null
+The Adventures of Sherlock Holmes,Sir Arthur Conan Doyle,ON_SHELF,null
+20000 Leagues under the Sea,Jules Verne,ON_SHELF,null
+One Hundred Years of Solitude,Gabriel Garcia Marquez,ON_SHELF,null
+Lolita,Vladimir Nabokov,ON_SHELF,null

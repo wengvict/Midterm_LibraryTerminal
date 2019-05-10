@@ -6,14 +6,14 @@ public class Book {
 
 	private String title;
 	private String author;
-	private boolean onShelf;
+	private checkedOut onShelf;
 	private LocalDate dueDate;
 	
 	public Book() {
 		
 	}
 	
-	public Book(String title, String author, boolean onShelf, LocalDate dueDate) {
+	public Book(String title, String author, checkedOut onShelf, LocalDate dueDate) {
 		this.title = title;
 		this.author = author;
 		this.onShelf = onShelf;
@@ -22,7 +22,7 @@ public class Book {
 	
 	// this overloaded cnstructor takes no dueDate
 	// if book has no dueDate, add if/else statement for onShelf in library class
-	public Book(String title, String author, boolean onShelf) {
+	public Book(String title, String author, checkedOut onShelf) {
 		this.title = title;
 		this.author = author;
 		this.onShelf = onShelf;
@@ -40,10 +40,10 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public boolean isStatus() {
+	public checkedOut isStatus() {
 		return onShelf;
 	}
-	public void setStatus(boolean onShelf) {
+	public void setStatus(checkedOut onShelf) {
 		this.onShelf = onShelf;
 	}
 	public LocalDate getDueDate() {

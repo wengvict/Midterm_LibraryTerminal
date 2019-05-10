@@ -52,13 +52,17 @@ public class LibraryApp {
 				System.out.println("which book do you want to checkout (enter the index #)");
 				List<Book> booklist = Library.readBookInv("src/books.txt");
 				int bookCheckOut = Validator.getInt(scan, "", 1, booklist.size());
+				
+				
+				
+				
 
 				// check if book is already checkout out. if onshelf=true, continue
 				System.out.print("you checked out: ");
 				System.out.println(
 						booklist.get(bookCheckOut - 1).getTitle() + " by "
 								+ booklist.get(bookCheckOut - 1).getAuthor());
-				booklist.get(bookCheckOut - 1).setStatus(false);
+				booklist.get(bookCheckOut - 1).setStatus(checkedOut.CHECKED_OUT);
 				booklist.get(bookCheckOut - 1).setDueDate(currentDay.plusDays(14));
 				System.out.println("due date: " + booklist.get(bookCheckOut - 1).getDueDate());
 

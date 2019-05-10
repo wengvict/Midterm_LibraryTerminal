@@ -28,7 +28,7 @@ public class Library {
 
 			while (line != null) {
 				String[] arr = line.split(",");
-				Book book = new Book(arr[0], arr[1], Boolean.parseBoolean(arr[2]));
+				Book book = new Book(arr[0], arr[1], checkedOut.valueOf(arr[2]));
 				bookList.add(book);
 				line = br.readLine();
 			}
