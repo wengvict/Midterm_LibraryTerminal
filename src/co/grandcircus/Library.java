@@ -78,24 +78,26 @@ public class Library {
 	}
 
 	public static void findByName(List<Book> list, String userSearchAuthor ) {
+		Book b;
 		int counter = 0;
 		for (int i = 0; i < list.size(); i++) {
-			
 			
 			String s = list.get(i).getAuthor();
 			s = s.toLowerCase();
 			userSearchAuthor = userSearchAuthor.toLowerCase();
 			if(s.contains(userSearchAuthor)) {
-				System.out.println((i + 1) + ": " + list.get(i));
+				b = list.get(i);
+				System.out.println("\n" + (i + 1) + ": " + b.getTitle() + " by " + b.getAuthor() + "\nStatus: " + b.isStatus() + "\nDue back on: " + b.getDueDate());
 				counter++;
 			}
 			}
 			if (counter == 0) {
-				System.out.println("not found");
+				System.out.println("Book not found.");
 			}
 		}
 		
 	public static void findByTitle(List<Book> list, String userSearchTitle ) {
+		Book b;
 		int counter = 0;
 		for (int i = 0; i < list.size(); i++) {
 			
@@ -103,7 +105,8 @@ public class Library {
 			s = s.toLowerCase();
 			userSearchTitle = userSearchTitle.toLowerCase();
 			if(s.contains(userSearchTitle)) {
-				System.out.println((i + 1) + ": " + list.get(i));
+				b = list.get(i);
+				System.out.println("\n" + (i + 1) + ": " + b.getTitle() + " by " + b.getAuthor() + "\nStatus: " + b.isStatus() + "\nDue back on: " + b.getDueDate());
 				counter++;
 			}
 			}

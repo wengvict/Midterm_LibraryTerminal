@@ -20,7 +20,7 @@ public class Validator {
 				i = sc.nextInt();
 				isValid = true;
 			} else {
-				System.out.println("Error! Invalid integer value. Try again.");
+				System.out.print("That is not a valid option. Please choose an option from the menu: ");
 			}
 			sc.nextLine(); // discard any other data entered on the line
 		}
@@ -33,9 +33,9 @@ public class Validator {
 		while (isValid == false) {
 			i = getInt(sc, prompt);
 			if (i < min)
-				System.out.println("Error! Number must be " + min + " or greater.");
+				System.out.print("That is not a valid option. Please choose an option from the menu: ");
 			else if (i > max)
-				System.out.println("Error! Number must be " + max + " or less.");
+				System.out.print("That is not a valid option. Please choose an option from the menu: ");
 			else
 				isValid = true;
 		}

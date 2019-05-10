@@ -13,18 +13,20 @@ public class LibraryApp {
 		// list for books to be checked out
 		List<Book> checkedOutBooks = new ArrayList<Book>();
 
-		System.out.println("welcome to the Grand Circus library");
+		System.out.println("Welcome to the Grand Circus Library!");
 
 		int input;
 		do {
 			System.out.println();
-			System.out.println("would you like to search for a book or checkout a book?");
-			System.out.println("1: Display all books");
+			System.out.println("Would you like to search for a book or checkout a book?\n");
+			System.out.println("1: Display All Books");
 			System.out.println("2: Search by Author");
 			System.out.println("3: Search by Title");
-			System.out.println("4: Checkout a book");
-			System.out.println("5: Return a book");
+			System.out.println("4: Checkout a Book");
+			System.out.println("5: Return a Book");
 			System.out.println("6: Exit");
+			
+			System.out.print("\nPick a menu option: ");
 
 			// if 1. list books
 			input = Validator.getInt(scan, "", 1, 6);
@@ -50,31 +52,31 @@ public class LibraryApp {
 			}
 			// if 2. search by author
 			if (input == 2) {
-				String authorName = Validator.getString(scan, "enter part or all of Author's name");
+				String authorName = Validator.getString(scan, "Enter part or all of author's name: ");
 
 				Library.findByName(Library.readBookInv("src/books.txt"), authorName);
 			}
 			// add search by name
 			if (input == 3) {
-				String userTitle = Validator.getString(scan, "enter part or all of book title ");
+				String userTitle = Validator.getString(scan, "Enter part or all of book title: ");
 				Library.findByTitle(Library.readBookInv("src/books.txt"), userTitle);
 			}
 
 			// checkout a book
 			if (input == 4) {
 				LocalDate currentDay = LocalDate.now();
-				System.out.println("which book do you want to checkout (enter the index #) ");
+				System.out.print("Enter the index number of the book you want to checkout: ");
 				List<Book> booklist = Library.readBookInv("src/books.txt");
 				int bookCheckOut = Validator.getInt(scan, "", 1, booklist.size());
 
 				if ((booklist.get(bookCheckOut - 1).isStatus()) == checkedOut.ON_SHELF) {
 					// check if book is already checkout out. if onshelf=true, continue
-					System.out.print("you checked out: ");
+					System.out.print("\nYou checked out: ");
 					System.out.println(booklist.get(bookCheckOut - 1).getTitle() + " by "
 							+ booklist.get(bookCheckOut - 1).getAuthor());
 					booklist.get(bookCheckOut - 1).setStatus(checkedOut.CHECKED_OUT);
 					booklist.get(bookCheckOut - 1).setDueDate(currentDay.plusDays(14));
-					System.out.println("due date: " + booklist.get(bookCheckOut - 1).getDueDate());
+					System.out.println("Due back on: " + booklist.get(bookCheckOut - 1).getDueDate());
 
 					checkedOutBooks.add(booklist.get(bookCheckOut - 1));
 					// add updated book to list
@@ -82,7 +84,7 @@ public class LibraryApp {
 					Library.writeToFile(booklist);
 
 				} else {
-					System.out.println("That book is already checked out");
+					System.out.println("That book is already checked out.");
 					List<Book> booklist1 = Library.readBookInv("src/books.txt");
 					System.out.println(booklist.get((bookCheckOut) - 1).getTitle() + " is due back on "
 							+ booklist1.get(bookCheckOut - 1).getDueDate());
@@ -110,12 +112,12 @@ public class LibraryApp {
 						String index = String.format(" %-5s ", (i + 1) + ": ");
 						String dateF = String.format("| %-8s %n", b.getDueDate());
 						
-						System.out.println(index + authorF + titleF + onShelfF + dateF);
+						System.out.println("\n"+ index + authorF + titleF + onShelfF + dateF);
 					}
 
 				}
 				if (counter > 0) {
-					System.out.println("Which book are you returning? ");
+					System.out.print("Enter the index number of the book you are returning: ");
 
 					//
 					int returnBook = Validator.getInt(scan, "", 1, booklist.size());
@@ -123,7 +125,7 @@ public class LibraryApp {
 					booklist.get(returnBook - 1).setDueDate(null);
 					Library.writeToFile(booklist);
 				} else {
-					System.out.println("There are no books checked out to return.");
+					System.out.println("No books are currently checked out.");
 				}
 			}
 
@@ -133,13 +135,13 @@ public class LibraryApp {
 		// display books that were checked out
 
 		if (checkedOutBooks.size() > 0) {
-			System.out.println("you checked out: ");
+			System.out.println("You checked out: ");
 			for (Book a : checkedOutBooks) {
 				System.out.println(a.getTitle() + ", due: " + a.getDueDate());
 			}
 		}
 		System.out.println();
-		System.out.println("bye!");
+		System.out.println("Thank you for stopping by the Grand Circus Library");
 	}
 
 }
