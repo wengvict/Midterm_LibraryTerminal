@@ -20,7 +20,7 @@ public class Validator {
 				i = sc.nextInt();
 				isValid = true;
 			} else {
-				System.out.print("That is not a valid option. Please choose an option from the menu: ");
+				System.out.print("That is not a valid option. Please choose an option from the list: ");
 			}
 			sc.nextLine(); // discard any other data entered on the line
 		}
@@ -33,9 +33,9 @@ public class Validator {
 		while (isValid == false) {
 			i = getInt(sc, prompt);
 			if (i < min)
-				System.out.print("That is not a valid option. Please choose an option from the menu: ");
+				System.out.print("That is not a valid option. Please choose an option from the list: ");
 			else if (i > max)
-				System.out.print("That is not a valid option. Please choose an option from the menu: ");
+				System.out.print("That is not a valid option. Please choose an option from the list: ");
 			else
 				isValid = true;
 		}
