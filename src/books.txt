@@ -13,4 +13,8 @@ The Adventures of Sherlock Holmes,Sir Arthur Conan Doyle,ON_SHELF,null
 20000 Leagues Under the Sea,Jules Verne,ON_SHELF,null
 One Hundred Years of Solitude,Gabriel Garcia Marquez,ON_SHELF,null
 Lolita,Vladimir Nabokov,ON_SHELF,null
-game of htrones,goerge,ON_SHELF,null
+Song of Fire and Ice,George R.R. Martin,ON_SHELF,null
+Song of Ice and Fire,George R.R. Martin,CHECKED_OUT,2019-05-27
+Song of Ice and Fire,George R.R. Martin,ON_SHELF,null
+Song of Ice and Fire,George R.R. Martin,ON_SHELF,null
+Winny the Pooh,Christopher Robin,ON_SHELF,null

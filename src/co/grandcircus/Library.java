@@ -117,22 +117,27 @@ public class Library {
 	
 	public static void addBook(Book book) {
 		List<Book> b = readBookInv("src/books.txt");
+		String noDuplicateBookTitle = book.getTitle();
 		
+		int flag = 0;
 		// adds book after checking for book title
-		if(!b.contains(book.getTitle())) {
-			b.add(book);
-			writeToFile(b);
+		for(int i = 0; i < b.size(); i++) {
 			
-			// just in case book is not on file
-		} else {
-			System.out.println("This book is already on file.");
+			if(b.get(i).getTitle().equalsIgnoreCase(noDuplicateBookTitle)) {
+				System.out.println("Book is already on file.");
+				flag++;
+				break;
+			}
 		}
 		
+		
+		if(flag == 0) {
+			b.add(book);
+			writeToFile(b);
+			System.out.println("Your book is added!");
+			
+		} 
+		
 	}
-	
-	
-	
-	
-	
-	
+
 }

@@ -30,7 +30,7 @@ public class LibraryApp {
 			System.out.print("\nPick a menu option: ");
 
 			// if 1. list books
-			input = Validator.getInt(scan, "", 1, 6);
+			input = Validator.getInt(scan, "", 1, 7);
 			if (input == 1) {
 
 				List<Book> booklist = Library.readBookInv("src/books.txt");
@@ -135,7 +135,6 @@ public class LibraryApp {
 			if (input == 6) {
 				System.out.println("Add a Book\n");
 				System.out.print("Book title: ");
-				System.out.print("\n");
 				String addBookTitle = scan.nextLine();
 				System.out.print("Author name: ");
 				String addAuthorName = scan.nextLine();
