@@ -115,8 +115,19 @@ public class Library {
 			}
 		}
 	
-	public static void addBook(List<Book> list, Book book) {
-
+	public static void addBook(Book book) {
+		List<Book> b = readBookInv("src/books.txt");
+		
+		// adds book after checking for book title
+		if(!b.contains(book.getTitle())) {
+			b.add(book);
+			writeToFile(b);
+			
+			// just in case book is not on file
+		} else {
+			System.out.println("This book is already on file.");
+		}
+		
 	}
 	
 	

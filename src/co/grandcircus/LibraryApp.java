@@ -24,7 +24,8 @@ public class LibraryApp {
 			System.out.println("3: Search by Title");
 			System.out.println("4: Checkout a Book");
 			System.out.println("5: Return a Book");
-			System.out.println("6: Exit");
+			System.out.println("6: Add a Book");
+			System.out.println("7: Exit");
 			
 			System.out.print("\nPick a menu option: ");
 
@@ -130,8 +131,22 @@ public class LibraryApp {
 				}
 			}
 
-			// exit condition
-		} while (input != 6);
+			// adds book
+			if (input == 6) {
+				System.out.println("Add a Book\n");
+				System.out.print("Book title: ");
+				System.out.print("\n");
+				String addBookTitle = scan.nextLine();
+				System.out.print("Author name: ");
+				String addAuthorName = scan.nextLine();
+				
+				Book book = new Book(addBookTitle, addAuthorName, checkedOut.ON_SHELF);
+				
+				Library.addBook(book);
+			
+			}
+		// exit condition
+		} while (input != 7);
 
 		// display books that were checked out
 
